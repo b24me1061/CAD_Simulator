@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CAD Model Analyzer</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- Navigation -->
+    <!-- ============================= -->
+
+    <nav>
+
+        <div class="logo">
+            ⚙ Simulator
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ============================= -->
+    <!-- Main Content -->
+    <!-- ============================= -->
+
+    <main>
+
+
+        <!-- Hero Section -->
+
+        <section class="hero">
+
+            <h1>
+                CAD Model Analyzer
+            </h1>
+
+            <p>
+                Upload your 3D CAD model and analyze
+                its engineering properties instantly.
+            </p>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- Upload Section -->
+        <!-- ============================= -->
+     <div class="model-workspace">
+
+        <section class="upload-section">
+
+
+            <div class="upload-box">
+
+
+                <div class="upload-icon">
+                    📁
+                </div>
+
+
+                <h2>
+                    Upload The Model
+                </h2>
+
+
+                <p>
+                    Select an .stl or .obj or .ply or .off or .glb or .gltf or .3mf or .stp or .step or .igs or .iges  file from your computer
+                </p>
+
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".stl,.obj,.ply,.off,.glb,.gltf,.3mf,.stp,.step,.iges,.igs"
+                >
+
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- Material Selection -->
+            <!-- ============================= -->
+
+            <div class="material-section">
+
+
+                            <label for="material">Material</label>
+
+            <select id="material">
+
+                <!-- Ferrous Metals -->
+                <optgroup label="Ferrous Metals">
+                    <option value="steel">Steel</option>
+                    <option value="stainless_steel">Stainless Steel</option>
+                    <option value="carbon_steel">Carbon Steel</option>
+                    <option value="tool_steel">Tool Steel</option>
+                    <option value="cast_iron">Cast Iron</option>
+                    <option value="ductile_iron">Ductile Iron</option>
+                    <option value="wrought_iron">Wrought Iron</option>
+                </optgroup>
+
+                <!-- Aluminum & Magnesium -->
+                <optgroup label="Aluminum & Magnesium">
+                    <option value="aluminum">Aluminum</option>
+                    <option value="aluminum_6061">Aluminum 6061</option>
+                    <option value="aluminum_7075">Aluminum 7075</option>
+                    <option value="magnesium">Magnesium</option>
+                    <option value="magnesium_alloy">Magnesium Alloy</option>
+                </optgroup>
+
+                <!-- Copper Alloys -->
+                <optgroup label="Copper & Copper Alloys">
+                    <option value="copper">Copper</option>
+                    <option value="brass">Brass</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="phosphor_bronze">Phosphor Bronze</option>
+                </optgroup>
+
+                <!-- Other Metals -->
+                <optgroup label="Other Metals">
+                    <option value="titanium">Titanium</option>
+                    <option value="titanium_alloy">Titanium Alloy</option>
+                    <option value="nickel">Nickel</option>
+                    <option value="zinc">Zinc</option>
+                    <option value="zinc_alloy">Zinc Alloy</option>
+                    <option value="lead">Lead</option>
+                    <option value="tin">Tin</option>
+                    <option value="cobalt">Cobalt</option>
+                    <option value="chromium">Chromium</option>
+                    <option value="manganese">Manganese</option>
+                </optgroup>
+
+                <!-- Precious / Special -->
+                <optgroup label="Precious & Special Metals">
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="platinum">Platinum</option>
+                </optgroup>
+
+                <!-- Engineering Plastics -->
+                <optgroup label="Engineering Plastics">
+                    <option value="ABS">ABS</option>
+                    <option value="nylon">Nylon</option>
+                    <option value="polycarbonate">Polycarbonate</option>
+                    <option value="PVC">PVC</option>
+                    <option value="HDPE">HDPE</option>
+                    <option value="LDPE">LDPE</option>
+                    <option value="polypropylene">Polypropylene</option>
+                    <option value="polystyrene">Polystyrene</option>
+                    <option value="acetal">Acetal (POM)</option>
+                    <option value="PTFE">PTFE</option>
+                    <option value="PEEK">PEEK</option>
+                    <option value="PET">PET</option>
+                    <option value="PMMA">PMMA (Acrylic)</option>
+                </optgroup>
+
+                <!-- Composites -->
+                <optgroup label="Composites">
+                    <option value="carbon_fiber">Carbon Fiber</option>
+                    <option value="fiberglass">Fiberglass</option>
+                    <option value="GFRP">GFRP</option>
+                    <option value="CFRP">CFRP</option>
+                </optgroup>
+
+                <!-- Ceramics -->
+                <optgroup label="Ceramics">
+                    <option value="alumina">Alumina</option>
+                    <option value="silicon_carbide">Silicon Carbide</option>
+                    <option value="silicon_nitride">Silicon Nitride</option>
+                    <option value="zirconia">Zirconia</option>
+                    <option value="ceramic">Ceramic</option>
+                </optgroup>
+
+                <!-- Natural Materials -->
+                <optgroup label="Natural & Other Materials">
+                    <option value="wood">Wood</option>
+                    <option value="rubber">Rubber</option>
+                    <option value="natural_rubber">Natural Rubber</option>
+                </optgroup>
+
+            </select>
+
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- Analyze Button -->
+            <!-- ============================= -->
+
+            <button
+                id="analyzeButton"
+                type="button"
+            >
+                ANALYZE MODEL
+            </button>
+
+
+        </section>
+
+            <!-- ============================= -->
+            <!-- 3D Model Viewer -->
+            <!-- ============================= -->
+
+            <section id="viewerSection" class="viewer-section">
+
+                <div class="viewer-header">
+
+                    <div>
+                        <h2>3D Model Viewer</h2>
+                        <p>Interactive CAD model visualization</p>
+                    </div>
+
+                </div>
+
+                <div id="viewerContainer">
+
+                    <div class="viewer-placeholder">
+                        <div>3D</div>
+                        <p>3D model will appear here after analysis</p>
+                    </div>
+
+                </div>
+
+                <div class="viewer-controls">
+
+                    <button id="resetView" type="button">
+                        Reset View
+                    </button>
+
+                    <button id="toggleWireframe" type="button">
+                        Wireframe
+                    </button>
+
+                    <button id="toggleGrid" type="button">
+                        Grid
+                    </button>
+
+                    <button id="toggleAxes" type="button">
+                        Axes
+                    </button>
+
+                </div>
+
+            </section>
+        </div>
+
+        <!-- ============================= -->
+        <!-- Results Section -->
+        <!-- ============================= -->
+
+            <section class="results-section">
+
+                <div class="results-header">
+                    <div>
+                        <h2>CAD Model Analysis</h2>
+                        <p id="resultFilename">No model analyzed</p>
+                    </div>
+
+                    <div id="modelStatus" class="status pending">
+                        ● WAITING
+                    </div>
+                </div>
+
+                <div id="results">
+
+                    <div class="result-placeholder">
+                        <div class="placeholder-icon">📊</div>
+                        <h3>No Analysis Available</h3>
+                        <p>Upload a 3D model and click Analyze Model.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+        <!-- ============================= -->
+        <!-- About Section -->
+        <!-- ============================= -->
+
+        <section
+            id="about"
+            class="about-section"
+        >
+
+           
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- Footer -->
+    <!-- ============================= -->
+
+    <footer>
+
+        <p>
+            © 2026 CAD simulating
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script type="importmap">
+            {
+                "imports": {
+                    "three": "/node_modules/three/build/three.module.js"
+                }
+            }
+            </script>
+
+            <script type="module" src="/script.js"></script>
+
+
+</body>
+
+</html>
